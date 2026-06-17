@@ -4,13 +4,13 @@ import Navbar from "../../components/Navbar";
 import { useState } from "react";
 
 export default function InscripcionesPage() {
-  const [nombre, setNombre] = useState("");
+  const [idPlataforma, setIdPlataforma] = useState("");
   const [twitch, setTwitch] = useState("");
   const [juego, setJuego] = useState("FC");
   const [plataforma, setPlataforma] = useState("PlayStation");
 
   function inscribirse() {
-    if (!nombre || !twitch) {
+    if (!idPlataforma || !twitch) {
       alert("Completa todos los campos");
       return;
     }
@@ -56,7 +56,7 @@ export default function InscripcionesPage() {
                 opacity: 0.8,
               }}
             >
-              Apúntate a los eventos y actividades de la comunidad.
+              Apúntate a los eventos de la comunidad JONEXO7OFFICIAL.
             </p>
           </div>
 
@@ -67,15 +67,14 @@ export default function InscripcionesPage() {
               border: "1px solid rgba(255,255,255,0.1)",
               borderRadius: "24px",
               padding: "30px",
-              backdropFilter: "blur(10px)",
             }}
           >
             <h2>👤 Datos del Participante</h2>
 
             <input
-              placeholder="Nombre"
-              value={nombre}
-              onChange={(e) => setNombre(e.target.value)}
+              placeholder="ID Plataforma (PSN, Xbox o PC)"
+              value={idPlataforma}
+              onChange={(e) => setIdPlataforma(e.target.value)}
               style={{
                 width: "100%",
                 padding: "14px",
@@ -93,7 +92,7 @@ export default function InscripcionesPage() {
               style={{
                 width: "100%",
                 padding: "14px",
-                marginBottom: "20px",
+                marginBottom: "25px",
                 borderRadius: "12px",
                 border: "none",
               }}
@@ -108,7 +107,7 @@ export default function InscripcionesPage() {
                 width: "100%",
                 padding: "14px",
                 marginTop: "15px",
-                marginBottom: "20px",
+                marginBottom: "25px",
                 borderRadius: "12px",
                 border: "none",
               }}

@@ -95,9 +95,41 @@ export default function Home() {
 
             <h3>FC Tournament #1</h3>
 
-            <p>
-              Próximamente inscripciones abiertas para la comunidad.
+            <p
+              style={{
+                marginBottom: "20px",
+                opacity: 0.9,
+              }}
+            >
+              Las inscripciones se abrirán durante los directos.
             </p>
+
+            <a
+              href="/inscripciones"
+              style={{
+                display: "inline-block",
+                background: "#9146FF",
+                color: "white",
+                padding: "14px 30px",
+                borderRadius: "12px",
+                textDecoration: "none",
+                fontWeight: "bold",
+                fontSize: "18px",
+                marginBottom: "20px",
+              }}
+            >
+              🚀 INSCRIBIRSE
+            </a>
+
+            <div
+              style={{
+                marginTop: "10px",
+                fontSize: "18px",
+                fontWeight: "bold",
+              }}
+            >
+              🔴 INSCRIPCIONES CERRADAS
+            </div>
           </div>
 
           <h2 style={{ marginBottom: "20px" }}>
@@ -148,6 +180,13 @@ export default function Home() {
               marginBottom: "50px",
             }}
           >
+            <GameCard
+              title="Inscripciones"
+              description="Torneos, eventos y Clubes Pro"
+              href="/inscripciones"
+              icon="📝"
+            />
+
             <GameCard
               title="Music Room"
               description="Cola musical de la comunidad"
