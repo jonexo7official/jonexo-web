@@ -67,6 +67,13 @@ export default function FCPage() {
             />
 
             <GameCard
+              title="Enfrentamientos"
+              description="Partidos, resultados y gestión"
+              href="/fc/enfrentamientos"
+              icon="⚔️"
+            />
+
+            <GameCard
               title="Clasificaciones"
               description="Rankings y tablas"
               href="/fc/clasificaciones"
