@@ -6,7 +6,7 @@ export default function Home() {
       style={{
         minHeight: "100vh",
         backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('/jonexo-overlay.webp')",
+          "linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)), url('/jonexo-overlay.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -20,27 +20,64 @@ export default function Home() {
           margin: "0 auto",
         }}
       >
-        <h1
-          style={{
-            fontSize: "4rem",
-            textAlign: "center",
-            marginBottom: "10px",
-          }}
-        >
-          JONEXO7 OFFICIAL
-        </h1>
-
-        <p
+        <div
           style={{
             textAlign: "center",
-            opacity: 0.8,
-            marginBottom: "50px",
+            marginBottom: "60px",
           }}
         >
-          Torneos • Zombies • GTA • Comunidad
-        </p>
+          <h1
+            style={{
+              fontSize: "4rem",
+              marginBottom: "10px",
+              fontWeight: "bold",
+              letterSpacing: "2px",
+            }}
+          >
+            JONEXO7OFFICIAL
+          </h1>
 
-        <h2>🎮 Juegos Principales</h2>
+          <h2
+            style={{
+              opacity: 0.9,
+              marginBottom: "15px",
+            }}
+          >
+            Gaming Community
+          </h2>
+
+          <p
+            style={{
+              opacity: 0.8,
+              marginBottom: "30px",
+            }}
+          >
+            FC • COD Zombies • GTA • Comunidad
+          </p>
+
+          <a
+            href="https://www.twitch.tv/jonexo7official"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              background: "#9146FF",
+              color: "white",
+              padding: "14px 30px",
+              borderRadius: "12px",
+              textDecoration: "none",
+              fontWeight: "bold",
+              fontSize: "18px",
+              boxShadow: "0 0 20px rgba(145,70,255,0.5)",
+            }}
+          >
+            🔴 VER DIRECTO
+          </a>
+        </div>
+
+        <h2 style={{ marginBottom: "20px" }}>
+          🎮 Juegos Principales
+        </h2>
 
         <div
           style={{
@@ -73,7 +110,9 @@ export default function Home() {
           />
         </div>
 
-        <h2>🌍 Comunidad</h2>
+        <h2 style={{ marginBottom: "20px" }}>
+          🌍 Comunidad
+        </h2>
 
         <div
           style={{
@@ -106,7 +145,9 @@ export default function Home() {
           />
         </div>
 
-        <h2>🚀 Juegos Secundarios</h2>
+        <h2 style={{ marginBottom: "20px" }}>
+          🚀 Juegos Secundarios
+        </h2>
 
         <div
           style={{
