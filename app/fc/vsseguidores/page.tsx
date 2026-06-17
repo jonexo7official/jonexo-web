@@ -1,6 +1,8 @@
 import Navbar from "../../../components/Navbar";
 
 export default function VsSeguidoresPage() {
+  const inscripcionesAbiertas = false;
+
   return (
     <>
       <Navbar />
@@ -43,6 +45,8 @@ export default function VsSeguidoresPage() {
             </p>
           </div>
 
+          {/* ESTADO */}
+
           <div
             style={{
               background: "rgba(145,70,255,0.15)",
@@ -50,14 +54,91 @@ export default function VsSeguidoresPage() {
               borderRadius: "20px",
               padding: "30px",
               marginBottom: "30px",
+              textAlign: "center",
+            }}
+          >
+            <h2>📢 ESTADO DE INSCRIPCIONES</h2>
+
+            <h3
+              style={{
+                marginTop: "20px",
+              }}
+            >
+              {inscripcionesAbiertas
+                ? "🟢 INSCRIPCIONES ABIERTAS"
+                : "🔴 INSCRIPCIONES CERRADAS"}
+            </h3>
+
+            <p
+              style={{
+                marginTop: "15px",
+                opacity: 0.8,
+              }}
+            >
+              Máximo 8 participantes por directo.
+            </p>
+
+            {inscripcionesAbiertas && (
+              <button
+                style={{
+                  marginTop: "20px",
+                  padding: "12px 24px",
+                  borderRadius: "12px",
+                  border: "none",
+                  background: "#9146FF",
+                  color: "white",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                }}
+              >
+                🚀 APUNTARME
+              </button>
+            )}
+          </div>
+
+          {/* JUGANDO AHORA */}
+
+          <div
+            style={{
+              background: "rgba(255,255,255,0.05)",
+              borderRadius: "20px",
+              padding: "30px",
+              marginBottom: "30px",
             }}
           >
             <h2>⚔️ JUGANDO AHORA</h2>
 
-            <p style={{ marginTop: "20px" }}>
+            <p
+              style={{
+                marginTop: "20px",
+              }}
+            >
               Jonexo7Official vs Pendiente
             </p>
           </div>
+
+          {/* PROXIMO RIVAL */}
+
+          <div
+            style={{
+              background: "rgba(255,255,255,0.05)",
+              borderRadius: "20px",
+              padding: "30px",
+              marginBottom: "30px",
+            }}
+          >
+            <h2>🎯 PRÓXIMO RIVAL</h2>
+
+            <p
+              style={{
+                marginTop: "20px",
+              }}
+            >
+              Pendiente
+            </p>
+          </div>
+
+          {/* COLA */}
 
           <div
             style={{
@@ -69,10 +150,25 @@ export default function VsSeguidoresPage() {
           >
             <h2>📋 COLA DE ESPERA</h2>
 
-            <p style={{ marginTop: "20px" }}>
+            <p
+              style={{
+                marginTop: "15px",
+                fontWeight: "bold",
+              }}
+            >
+              0 / 8 plazas ocupadas
+            </p>
+
+            <p
+              style={{
+                marginTop: "20px",
+              }}
+            >
               No hay jugadores en cola.
             </p>
           </div>
+
+          {/* HISTORIAL */}
 
           <div
             style={{
@@ -83,8 +179,12 @@ export default function VsSeguidoresPage() {
           >
             <h2>🏆 HISTORIAL VS SEGUIDORES</h2>
 
-            <p style={{ marginTop: "20px" }}>
-              Próximamente aparecerán los últimos resultados.
+            <p
+              style={{
+                marginTop: "20px",
+              }}
+            >
+              Próximamente aparecerán los últimos resultados y rivales enfrentados.
             </p>
           </div>
         </div>
