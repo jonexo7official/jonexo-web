@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_AUTH_DOMAIN",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_STORAGE",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID",
+  apiKey: "AIzaSyAw3AjAdMX20kD6BVkM_nfJeaku5SFNr8o",
+  authDomain: "jonexo-fc.firebaseapp.com",
+  projectId: "jonexo-fc",
+  storageBucket: "jonexo-fc.firebasestorage.app",
+  messagingSenderId: "599267907841",
+  appId: "1:599267907841:web:5222475d6065c4f2e12300",
 };
 
 const app = initializeApp(firebaseConfig);
