@@ -1,7 +1,53 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../lib/firebase";
+import { useRouter } from "next/navigation";
+
 import Navbar from "../../components/Navbar";
 import GameCard from "../../components/GameCard";
 
 export default function AdminPage() {
+  const router = useRouter();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        router.push("/login");
+      } else {
+        setLoading(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [router]);
+
+  async function handleLogout() {
+    await signOut(auth);
+    router.push("/login");
+  }
+
+  if (loading) {
+    return (
+      <main
+        style={{
+          minHeight: "100vh",
+          background: "#0f172a",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "white",
+          fontSize: "2rem",
+        }}
+      >
+        Cargando Panel Admin...
+      </main>
+    );
+  }
+
   return (
     <>
       <Navbar />
@@ -38,10 +84,24 @@ export default function AdminPage() {
             <p
               style={{
                 opacity: 0.8,
+                marginBottom: "20px",
               }}
             >
               Centro de control de JONEXO7OFFICIAL
             </p>
+
+            <button
+              onClick={handleLogout}
+              style={{
+                padding: "12px 25px",
+                borderRadius: "10px",
+                border: "none",
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              🚪 Cerrar Sesión
+            </button>
           </div>
 
           <h2 style={{ marginBottom: "20px" }}>

@@ -1,8 +1,9 @@
 import Navbar from "../../../components/Navbar";
+import AdminGuard from "../../../components/AdminGuard";
 
 export default function AdminMusicRoomPage() {
   return (
-    <>
+    <AdminGuard>
       <Navbar />
 
       <main
@@ -99,10 +100,12 @@ export default function AdminMusicRoomPage() {
 
             <button>📊 Ver Votos</button>
             <button style={{ marginLeft: "10px" }}>⭐ Destacar Canción</button>
-            <button style={{ marginLeft: "10px" }}>🏆 Canción de la Semana</button>
+            <button style={{ marginLeft: "10px" }}>
+              🏆 Canción de la Semana
+            </button>
           </div>
         </div>
       </main>
-    </>
+    </AdminGuard>
   );
 }

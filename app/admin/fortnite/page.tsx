@@ -1,8 +1,9 @@
 import Navbar from "../../../components/Navbar";
+import AdminGuard from "../../../components/AdminGuard";
 
 export default function AdminFortnitePage() {
   return (
-    <>
+    <AdminGuard>
       <Navbar />
 
       <main
@@ -92,6 +93,6 @@ export default function AdminFortnitePage() {
           </div>
         </div>
       </main>
-    </>
+    </AdminGuard>
   );
 }

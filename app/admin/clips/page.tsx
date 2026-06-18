@@ -1,8 +1,9 @@
 import Navbar from "../../../components/Navbar";
+import AdminGuard from "../../../components/AdminGuard";
 
 export default function AdminClipsPage() {
   return (
-    <>
+    <AdminGuard>
       <Navbar />
 
       <main
@@ -104,6 +105,6 @@ export default function AdminClipsPage() {
           </div>
         </div>
       </main>
-    </>
+    </AdminGuard>
   );
 }

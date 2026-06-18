@@ -1,8 +1,9 @@
 import Navbar from "../../../components/Navbar";
+import AdminGuard from "../../../components/AdminGuard";
 
 export default function AdminHallOfFamePage() {
   return (
-    <>
+    <AdminGuard>
       <Navbar />
 
       <main
@@ -124,6 +125,6 @@ export default function AdminHallOfFamePage() {
           </div>
         </div>
       </main>
-    </>
+    </AdminGuard>
   );
 }

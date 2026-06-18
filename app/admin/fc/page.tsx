@@ -1,8 +1,9 @@
 import Navbar from "../../../components/Navbar";
+import AdminGuard from "../../../components/AdminGuard";
 
 export default function FCAdminPage() {
   return (
-    <>
+    <AdminGuard>
       <Navbar />
 
       <main
@@ -145,6 +146,6 @@ export default function FCAdminPage() {
           </div>
         </div>
       </main>
-    </>
+    </AdminGuard>
   );
 }

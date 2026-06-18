@@ -1,8 +1,9 @@
 import Navbar from "../../../components/Navbar";
+import AdminGuard from "../../../components/AdminGuard";
 
 export default function AdminInscripcionesPage() {
   return (
-    <>
+    <AdminGuard>
       <Navbar />
 
       <main
@@ -88,6 +89,6 @@ export default function AdminInscripcionesPage() {
           </div>
         </div>
       </main>
-    </>
+    </AdminGuard>
   );
 }

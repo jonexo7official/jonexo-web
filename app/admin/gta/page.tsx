@@ -1,8 +1,9 @@
 import Navbar from "../../../components/Navbar";
+import AdminGuard from "../../../components/AdminGuard";
 
 export default function AdminGTAPage() {
   return (
-    <>
+    <AdminGuard>
       <Navbar />
 
       <main
@@ -89,6 +90,6 @@ export default function AdminGTAPage() {
           </div>
         </div>
       </main>
-    </>
+    </AdminGuard>
   );
 }

@@ -1,8 +1,9 @@
 import Navbar from "../../../components/Navbar";
+import AdminGuard from "../../../components/AdminGuard";
 
 export default function AdminSettingsPage() {
   return (
-    <>
+    <AdminGuard>
       <Navbar />
 
       <main
@@ -24,8 +25,6 @@ export default function AdminSettingsPage() {
             👑 CONFIGURACIÓN GLOBAL
           </h1>
 
-          {/* WEB */}
-
           <div
             style={{
               background: "rgba(145,70,255,0.15)",
@@ -44,8 +43,6 @@ export default function AdminSettingsPage() {
             </button>
           </div>
 
-          {/* INSCRIPCIONES */}
-
           <div
             style={{
               background: "rgba(255,255,255,0.05)",
@@ -62,8 +59,6 @@ export default function AdminSettingsPage() {
               🔒 Cerrar Inscripciones
             </button>
           </div>
-
-          {/* MUSIC ROOM */}
 
           <div
             style={{
@@ -82,8 +77,6 @@ export default function AdminSettingsPage() {
             </button>
           </div>
 
-          {/* CLIPS */}
-
           <div
             style={{
               background: "rgba(255,255,255,0.05)",
@@ -100,8 +93,6 @@ export default function AdminSettingsPage() {
               🔴 Desactivar Clips
             </button>
           </div>
-
-          {/* HALL OF FAME */}
 
           <div
             style={{
@@ -120,8 +111,6 @@ export default function AdminSettingsPage() {
             </button>
           </div>
 
-          {/* DIRECTO */}
-
           <div
             style={{
               background: "rgba(255,255,255,0.05)",
@@ -139,8 +128,6 @@ export default function AdminSettingsPage() {
             </button>
           </div>
 
-          {/* MENSAJE GLOBAL */}
-
           <div
             style={{
               background: "rgba(255,255,255,0.05)",
@@ -154,6 +141,6 @@ export default function AdminSettingsPage() {
           </div>
         </div>
       </main>
-    </>
+    </AdminGuard>
   );
 }
